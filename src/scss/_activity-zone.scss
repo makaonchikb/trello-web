@@ -1,0 +1,58 @@
+.trello__activity-zone{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    border: 3px solid #111111;
+    border-radius: 20px;
+    padding: 25px;
+    max-height: 75vh;
+    height: 100%;
+}
+.trello__todo-list{
+    display: flex;
+    flex-direction: column;
+    border: 2.5px solid #414141;
+    border-radius: 20px;
+    padding: 10px;
+    max-width: 400px;
+    width: 100%;    
+    p{
+        margin-bottom: 0px;
+    }
+}
+.trello__todo-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    align-items: center;
+    h2{
+        font-size: 20px;
+    }
+}
+.trello__in-progress-list{
+    display: flex;
+    flex-direction: column;
+    border: 2.5px solid #414141;
+    border-radius: 20px;
+    padding: 10px;
+    max-width: 400px;
+    width: 100%;    
+    p{
+        margin-bottom: 0px;
+    }
+}
+.trello__done-list{
+    display: flex;
+    flex-direction: column;
+    border: 2.5px solid #414141;
+    border-radius: 20px;
+    padding: 10px;
+    max-width: 400px;
+    width: 100%;    
+    p{
+        margin-bottom: 0px;
+    }
+}
+.todo-button{
+    margin-top: auto;
+}
