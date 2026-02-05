@@ -1,4 +1,36 @@
+body {
+    background: radial-gradient(circle at top, #0f0f0f, #050505 70%);
+    min-height: 100vh;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
 .trello{
     height: 100vh;
     padding: 0px 20px;
 }
+
+.trello__time {
+    display: inline-flex;        
+    justify-content: center;
+    align-items: center;
+    padding: 6px 12px;
+    background: #111;
+    border: 1px solid #00eaff;
+    border-radius: 8px;
+    box-shadow: 0 0 8px #00eaff;
+    width: auto;                 
+    max-width: fit-content;
+    margin-bottom: 15px;     
+}
+
+.global-time {
+    font-size: 18px;
+    font-weight: 600;
+    color: #00eaff;
+    text-shadow: 0 0 8px #00eaff;
+    white-space: nowrap; 
+    margin-bottom: 0px;      
+}
+
+

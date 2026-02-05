@@ -4,50 +4,39 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parcel Vanilla App</title>
+  <title>Trello clone</title>
   <link rel="stylesheet" href="./scss/app.scss">
   <script src="./js/app.js" type="module"></script>
 </head>
 
 <body>
   <section class="trello">
-    <div class="trello__header ">
+    <div class="trello__header">
       <h1 class="trello__title ">TRELLO</h1>
       <div class="trello__time">
-        <p>time</p>
+        <p class="global-time">time</p>
       </div>
     </div>
     <div class="trello__activity-zone">
-      <div class="trello__todo-list">
+      <div class="col-12 col-md-4 trello__todo-list">
         <div class="trello__todo-header" id="todo-header">
           <h2 class="list-title">TODO:</h2>
           <p class="todo-count">count</p>
         </div>
-        <div class="trello__cards-holder">
-          <div class="card">
-            <p class="card-title">Title</p>
-            <p class="card-description">Description</p>
-            <div class="card-info-wrapper">
-              <p class="card-user">User:</p>
-              <p class="card-time">Time</p>
-            </div>
-            <div class="card-buttons">
-              <button class="card-edit-btn btn btn-primary" type="button">Edit</button>
-              <button class="card-start-btn btn btn-primary" type="button">Start todo</button>
-              <button class="card-delete-btn btn btn-danger" type="button">Delete</button>
-            </div>
-          </div>
+        <div class="trello__cards-holder" id="todo-cards">
+
         </div>
-        <button class="todo-button btn btn-primary" type="button">
+        <button class="todo-button btn btn-primary" id="btn-add-todo" type="button">
           Add todo
         </button>
+
       </div>
       <div class="trello__in-progress-list">
         <div class="trello__todo-header" id="in-progress-header">
           <h2 class="list-title">IN PROGRESS:</h2>
           <p class="in-progress-count">count</p>
         </div>
-        <div class="trello__cards-holder">
+        <div class="trello__cards-holder" id="in-progress-cards">
 
         </div>
       </div>
@@ -56,12 +45,54 @@
           <h2 class="list-title">DONE:</h2>
           <p class="done-count">count</p>
         </div>
-        <div class="trello__cards-holder">
+        <div class="trello__cards-holder" id="done-cards">
 
         </div>
-        <button class="todo-button btn btn-danger" type="button">
+        <button class="delete-all-button btn btn-danger" type="button">
           Delete all
         </button>
+      </div>
+    </div>
+    <div class="add-todo-modal">
+      <div class="add-todo-modal-content">
+        <form action="" id="adding-form">
+          <input type="text" id="add-todo-modal-input" placeholder="Title">
+          <textarea name="Description" class="add-todo-modal-description" id="add-todo-modal-description"
+            placeholder="Description"></textarea>
+          <select id="user-select">
+            <option value="">Loading users...</option>
+          </select>
+          <select id="color-select">
+            <option value="neon-blue">Blue</option>
+            <option value="neon-pink">Pink</option>
+            <option value="neon-green">Green</option>
+            <option value="neon-yellow">Yellow</option>
+            <option value="neon-purple">Purple</option>
+            <option value="neon-red">Red</option>
+          </select>
+
+        </form>
+        <div class="add-todo-modal-buttons">
+          <button type="button" class="modal-btn" id="add-todo-submit-btn">Submit</button>
+          <button type="button" class="modal-btn-danger" id="add-todo-cancel-btn">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <div class="in-progress-allert">
+      <div class="in-progress-allert-content">
+        <p class="in-progress-allert-text">Не больше 6 активных дел!</p>
+        <div class="allert-button-wrapper">
+          <button class="in-progress-allert-button modal-btn" id="in-progress-alert-btn">Ok</button>
+        </div>
+      </div>
+    </div>
+    <div class="delete-all-alert">
+      <div class="delete-all-alert-content">
+        <p class="delete-all-alert-text">Вы уверены, что хотите удалить все выполненные задачи?</p>
+        <div class="alert-button-wrapper">
+          <button class="delete-all-confirm modal-btn" id="delete-all-confirm-btn">Ok</button>
+          <button class="delete-all-cancel modal-btn-danger" id="delete-all-cancel-btn">Cancel</button>
+        </div>
       </div>
     </div>
   </section>
