@@ -25,6 +25,7 @@ export const els = {
 };
 
 export function todoBuilder(todo) {
+    const { id, title, description, user, color, createDate, status } = todo;
     let buttons = '';
 
     if (todo.status === 'todo') {
@@ -49,12 +50,12 @@ export function todoBuilder(todo) {
     }
 
     return `
-    <div class="card ${todo.color}" id="${todo.id}">
-        <p class="card-title">${todo.title}</p>
-        <p class="card-description">${todo.description}</p>
+    <div class="card ${color}" id="${id}">
+        <p class="card-title">${title}</p>
+        <p class="card-description">${description}</p>
         <div class="card-info-wrapper">
-            <p class="card-user">User: ${todo.user}</p>
-            <p class="card-time">${new Date(todo.createDate).toLocaleDateString()}</p>
+            <p class="card-user">User: ${user}</p>
+            <p class="card-time">${new Date(createDate).toLocaleDateString()}</p>
         </div>
         <div class="card-buttons">
             ${buttons}

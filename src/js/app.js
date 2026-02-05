@@ -33,30 +33,39 @@ getData();
 renderTodos(data);
 
 //Events
+const { addTodoBtn, 
+    cancelAddBtn, 
+    submitAddBtn, 
+    addingForm, 
+    activityZone, 
+    inProgressAlertBtn, 
+    deleteAllDoneBtn, 
+    deleteAllConfirm, 
+    deleteAllCancel } = els;
 // Открыть модалку добавления
-els.addTodoBtn.addEventListener('click', openAddModal);
+addTodoBtn.addEventListener('click', openAddModal);
 
 // Закрыть модалку добавления
-els.cancelAddBtn.addEventListener('click', closeAddModal);
+cancelAddBtn.addEventListener('click', closeAddModal);
 
 // Подтверждение добавления / редактирования
-els.submitAddBtn.addEventListener('click', handleFormAccept);
-els.addingForm.addEventListener('submit', handleFormAccept);
+submitAddBtn.addEventListener('click', handleFormAccept);
+addingForm.addEventListener('submit', handleFormAccept);
 
 // Клики по карточкам
-els.activityZone.addEventListener('click', handleCardActions);
+activityZone.addEventListener('click', handleCardActions);
 
 // Предупреждение "не больше 6 задач"
-els.inProgressAlertBtn.addEventListener('click', closeInProgressAlert);
+inProgressAlertBtn.addEventListener('click', closeInProgressAlert);
 
 // Открыть модалку удаления всех DONE
-els.deleteAllDoneBtn.addEventListener('click', openDeleteAllModal);
+deleteAllDoneBtn.addEventListener('click', openDeleteAllModal);
 
 // Подтвердить удаление всех DONE
-els.deleteAllConfirm.addEventListener('click', handleDeleteAllDone);
+deleteAllConfirm.addEventListener('click', handleDeleteAllDone);
 
 // Отмена удаления всех DONE
-els.deleteAllCancel.addEventListener('click', closeDeleteAllModal);
+deleteAllCancel.addEventListener('click', closeDeleteAllModal);
 
 
 
