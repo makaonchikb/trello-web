@@ -1,4 +1,7 @@
 import { els } from './dom.js';
+import {
+    clearForm
+} from './handlers.js'
 
 export function openAddModal() {
     els.addModal.style.display = 'flex';
@@ -6,6 +9,7 @@ export function openAddModal() {
 
 export function closeAddModal() {
     els.addModal.style.display = 'none';
+    clearForm();
 }
 
 export function openDeleteAllModal() {

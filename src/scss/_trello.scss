@@ -5,13 +5,13 @@ body {
     font-family: 'Segoe UI', sans-serif;
 }
 
-.trello{
+.trello {
     height: 100vh;
     padding: 0px 20px;
 }
 
 .trello__time {
-    display: inline-flex;        
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     padding: 6px 12px;
@@ -19,9 +19,9 @@ body {
     border: 1px solid #00eaff;
     border-radius: 8px;
     box-shadow: 0 0 8px #00eaff;
-    width: auto;                 
+    width: auto;
     max-width: fit-content;
-    margin-bottom: 15px;     
+    margin-bottom: 15px;
 }
 
 .global-time {
@@ -29,8 +29,6 @@ body {
     font-weight: 600;
     color: #00eaff;
     text-shadow: 0 0 8px #00eaff;
-    white-space: nowrap; 
-    margin-bottom: 0px;      
+    white-space: nowrap;
+    margin-bottom: 0px;
 }
-
-
