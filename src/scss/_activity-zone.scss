@@ -1,58 +1,80 @@
-.trello__activity-zone{
+.trello__activity-zone {
     display: flex;
     justify-content: space-between;
     gap: 15px;
-    border: 3px solid #111111;
+    border: 3px solid #111;
     border-radius: 20px;
     padding: 25px;
     max-height: 75vh;
     height: 100%;
+    background: #0d0d0d;
 }
-.trello__todo-list{
+
+.trello__todo-list,
+.trello__in-progress-list,
+.trello__done-list {
     display: flex;
     flex-direction: column;
     border: 2.5px solid #414141;
     border-radius: 20px;
     padding: 10px;
     max-width: 400px;
-    width: 100%;    
-    p{
-        margin-bottom: 0px;
+    width: 100%;
+    background: #111;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
+    p {
+        margin-bottom: 0;
     }
 }
-.trello__todo-header{
+
+.trello__todo-header {
     display: flex;
     justify-content: space-between;
     padding: 5px 10px;
     align-items: center;
-    h2{
+
+    h2 {
         font-size: 20px;
+        color: #fff;
+        text-shadow: 0 0 5px #00eaff;
+    }
+
+    p {
+        color: #00eaff;
+        font-weight: bold;
+        text-shadow: 0 0 5px #00eaff;
     }
 }
-.trello__in-progress-list{
-    display: flex;
-    flex-direction: column;
-    border: 2.5px solid #414141;
-    border-radius: 20px;
-    padding: 10px;
-    max-width: 400px;
-    width: 100%;    
-    p{
-        margin-bottom: 0px;
-    }
-}
-.trello__done-list{
-    display: flex;
-    flex-direction: column;
-    border: 2.5px solid #414141;
-    border-radius: 20px;
-    padding: 10px;
-    max-width: 400px;
-    width: 100%;    
-    p{
-        margin-bottom: 0px;
-    }
-}
-.todo-button{
+
+.todo-button {
     margin-top: auto;
+    border-radius: 8px;
+    font-weight: 600;
+    border: 2px solid #00eaff;
+    background: transparent;
+    color: #00eaff;
+    transition: 0.2s ease;
+
+    &:hover {
+        background: #00eaff;
+        color: #000;
+        box-shadow: 0 0 10px #00eaff;
+    }
+}
+
+.delete-all-button {
+    margin-top: auto;
+    border-radius: 8px;
+    font-weight: 600;
+    border: 2px solid #ff0000;
+    background: transparent;
+    color: #ff0000;
+    transition: 0.2s ease;
+
+    &:hover {
+        background: #ff0000;
+        color: #000;
+        box-shadow: 0 0 10px #ff0000;
+    }
 }

@@ -1,0 +1,118 @@
+.add-todo-modal,
+.in-progress-allert,
+.delete-all-alert {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.55);
+    justify-content: center;
+    align-items: center;
+}
+
+.add-todo-modal-content,
+.in-progress-allert-content,
+.delete-all-alert-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #0f0f0f;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 380px;
+    width: 100%;
+    border: 2px solid #00eaff;
+    box-shadow: 0 0 15px #00eaff;
+    animation: modalFade 0.2s ease-out;
+}
+
+@keyframes modalFade {
+    from {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.add-todo-modal-content p,
+.in-progress-allert-content p,
+.delete-all-alert-content p {
+    color: #fff;
+    text-align: center;
+}
+
+.add-todo-modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    input,
+    textarea,
+    select {
+        background: #111;
+        border: 1px solid #333;
+        border-radius: 8px;
+        padding: 8px;
+        color: #fff;
+        transition: 0.2s ease;
+
+        &:focus {
+            border-color: #00eaff;
+            box-shadow: 0 0 8px #00eaff;
+            outline: none;
+        }
+    }
+
+    textarea {
+        resize: none;
+        min-height: 120px;
+    }
+}
+
+.add-todo-modal-buttons,
+.allert-button-wrapper,
+.alert-button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.modal-btn {
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: 2px solid #00eaff;
+    background: transparent;
+    color: #00eaff;
+    transition: 0.2s ease;
+
+    &:hover {
+        background: #00eaff;
+        color: #000;
+        box-shadow: 0 0 10px #00eaff;
+    }
+}
+
+.modal-btn-danger {
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: 2px solid #ff0033;
+    background: transparent;
+    color: #ff0033;
+    transition: 0.2s ease;
+
+    &:hover {
+        background: #ff0033;
+        color: #000;
+        box-shadow: 0 0 10px #ff0033;
+    }
+}
